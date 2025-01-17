@@ -1,5 +1,156 @@
 # node-addon-api Changelog
 
+## [8.3.0](https://github.com/nodejs/node-addon-api/compare/v8.2.2...v8.3.0) (2024-11-29)
+
+
+### Features
+
+* allow catching all exceptions ([#1593](https://github.com/nodejs/node-addon-api/issues/1593)) ([c679f6f](https://github.com/nodejs/node-addon-api/commit/c679f6f4c9dc6bf9fc0d99cbe5982bd24a5e2c7b))
+
+## [8.2.2](https://github.com/nodejs/node-addon-api/compare/v8.2.1...v8.2.2) (2024-11-07)
+
+
+### Bug Fixes
+
+* mark external memory and version APIs as basic ([#1597](https://github.com/nodejs/node-addon-api/issues/1597)) ([78da4fa](https://github.com/nodejs/node-addon-api/commit/78da4fa2251af1e4de16efac94d92388f117ae6e))
+* missing napi_delete_reference on ObjectWrap ref ([#1607](https://github.com/nodejs/node-addon-api/issues/1607)) ([98aae33](https://github.com/nodejs/node-addon-api/commit/98aae3343c3af36b4befd6b67c4cb19ba49b8d20))
+
+## [8.2.1](https://github.com/nodejs/node-addon-api/compare/v8.2.0...v8.2.1) (2024-10-09)
+
+
+### Bug Fixes
+
+* failed type cast checks in Symbol::WellKnown ([#1581](https://github.com/nodejs/node-addon-api/issues/1581)) ([d8523a7](https://github.com/nodejs/node-addon-api/commit/d8523a708030a0a3abb9d7832051c70e2dafac3d))
+* missing node_api_nogc_env definition ([#1585](https://github.com/nodejs/node-addon-api/issues/1585)) ([6ba3891](https://github.com/nodejs/node-addon-api/commit/6ba3891954d8b56215d133e54a86cb621e476b9e))
+
+## [8.2.0](https://github.com/nodejs/node-addon-api/compare/v8.1.0...v8.2.0) (2024-09-19)
+
+
+### Features
+
+* add support for nogc types via `BasicEnv`  ([#1514](https://github.com/nodejs/node-addon-api/issues/1514)) ([b4aeecb](https://github.com/nodejs/node-addon-api/commit/b4aeecb046480eeaaf1c578a140f71ac0e77094f))
+* add support for requiring basic finalizers ([#1568](https://github.com/nodejs/node-addon-api/issues/1568)) ([7bcb826](https://github.com/nodejs/node-addon-api/commit/7bcb826aa4323f450b3c58f9c7fb34243ff13f77))
+
+
+### Bug Fixes
+
+* call base basic finalizer if none defined ([#1574](https://github.com/nodejs/node-addon-api/issues/1574)) ([294a43f](https://github.com/nodejs/node-addon-api/commit/294a43f8c6a4c79b3295a8f1b83d4782d44cfe74))
+
+## [8.1.0](https://github.com/nodejs/node-addon-api/compare/node-addon-api-v8.0.0...node-addon-api-v8.1.0) (2024-07-05)
+
+
+### Features
+
+* Expose version property in public API ([#1479](https://github.com/nodejs/node-addon-api/issues/1479)) ([23bb42b](https://github.com/nodejs/node-addon-api/commit/23bb42b5e47630c9082dddbabea555626571926e))
+* improve messages on CheckCast ([#1507](https://github.com/nodejs/node-addon-api/issues/1507)) ([bf49519](https://github.com/nodejs/node-addon-api/commit/bf49519a4ce08ee5320327c9a0199cd89d5b87b3))
+
+
+### Bug Fixes
+
+* fix compilation for Visual Studio 2022 ([#1492](https://github.com/nodejs/node-addon-api/issues/1492)) ([e011720](https://github.com/nodejs/node-addon-api/commit/e011720010af26ed66638ceac822e5f1c5e43cde))
+* restore ability to run under NAPI_EXPERIMENTAL ([#1409](https://github.com/nodejs/node-addon-api/issues/1409)) ([40bcb09](https://github.com/nodejs/node-addon-api/commit/40bcb09e6b82e7a1164cb3de56cb503d9b5a3d37))
+
+## 2024-03-01 Version 8.0.0, @legendecas
+
+### Notable changes
+
+- Support for Node.js v16.x is no longer maintained.
+
+### Commits
+
+* \[[`df2147a2b6`](https://github.com/nodejs/node-addon-api/commit/df2147a2b6)] - build(deps): bump github/codeql-action from 3.24.3 to 3.24.5 (dependabot\[bot]) [#1455](https://github.com/nodejs/node-addon-api/pull/1455)
+* \[[`eb4fa9b55a`](https://github.com/nodejs/node-addon-api/commit/eb4fa9b55a)] - build(deps): bump actions/dependency-review-action from 4.1.0 to 4.1.3 (dependabot\[bot]) [#1452](https://github.com/nodejs/node-addon-api/pull/1452)
+* \[[`f85e8146bb`](https://github.com/nodejs/node-addon-api/commit/f85e8146bb)] - build(deps): bump github/codeql-action from 3.23.2 to 3.24.3 (dependabot\[bot]) [#1448](https://github.com/nodejs/node-addon-api/pull/1448)
+* \[[`b84deb0d2f`](https://github.com/nodejs/node-addon-api/commit/b84deb0d2f)] - build(deps): bump actions/dependency-review-action from 4.0.0 to 4.1.0 (dependabot\[bot]) [#1447](https://github.com/nodejs/node-addon-api/pull/1447)
+* \[[`7dcee380cd`](https://github.com/nodejs/node-addon-api/commit/7dcee380cd)] - build(deps): bump actions/setup-node from 4.0.1 to 4.0.2 (dependabot\[bot]) [#1444](https://github.com/nodejs/node-addon-api/pull/1444)
+* \[[`a727b629fe`](https://github.com/nodejs/node-addon-api/commit/a727b629fe)] - build(deps): bump actions/upload-artifact from 4.3.0 to 4.3.1 (dependabot\[bot]) [#1443](https://github.com/nodejs/node-addon-api/pull/1443)
+* \[[`ea712094e3`](https://github.com/nodejs/node-addon-api/commit/ea712094e3)] - build(deps): bump step-security/harden-runner from 2.6.1 to 2.7.0 (dependabot\[bot]) [#1440](https://github.com/nodejs/node-addon-api/pull/1440)
+* \[[`898e5006a5`](https://github.com/nodejs/node-addon-api/commit/898e5006a5)] - build(deps): bump github/codeql-action from 3.23.1 to 3.23.2 (dependabot\[bot]) [#1439](https://github.com/nodejs/node-addon-api/pull/1439)
+* \[[`66e6e0e4b6`](https://github.com/nodejs/node-addon-api/commit/66e6e0e4b6)] - build(deps): bump actions/upload-artifact from 4.0.0 to 4.3.0 (dependabot\[bot]) [#1438](https://github.com/nodejs/node-addon-api/pull/1438)
+* \[[`f1ca4ccd7f`](https://github.com/nodejs/node-addon-api/commit/f1ca4ccd7f)] - build(deps): bump actions/dependency-review-action from 3.1.5 to 4.0.0 (dependabot\[bot]) [#1433](https://github.com/nodejs/node-addon-api/pull/1433)
+* \[[`c58112d52e`](https://github.com/nodejs/node-addon-api/commit/c58112d52e)] - build(deps): bump github/codeql-action from 3.23.0 to 3.23.1 (dependabot\[bot]) [#1430](https://github.com/nodejs/node-addon-api/pull/1430)
+* \[[`f1b9c0bc24`](https://github.com/nodejs/node-addon-api/commit/f1b9c0bc24)] - **chore**: remove v16.x regular CI runs (Chengzhong Wu) [#1437](https://github.com/nodejs/node-addon-api/pull/1437)
+* \[[`c6561d90d6`](https://github.com/nodejs/node-addon-api/commit/c6561d90d6)] - **chore**: reduce dependabot noise (Chengzhong Wu) [#1436](https://github.com/nodejs/node-addon-api/pull/1436)
+* \[[`42931eeba6`](https://github.com/nodejs/node-addon-api/commit/42931eeba6)] - **doc**: reorganize readme (Chengzhong Wu) [#1441](https://github.com/nodejs/node-addon-api/pull/1441)
+* \[[`3b9f3db14e`](https://github.com/nodejs/node-addon-api/commit/3b9f3db14e)] - **doc**: update changelog maker commands (Chengzhong Wu) [#1431](https://github.com/nodejs/node-addon-api/pull/1431)
+* \[[`034c039298`](https://github.com/nodejs/node-addon-api/commit/034c039298)] - **test**: heed npm\_config\_debug (Gabriel Schulhof) [#1445](https://github.com/nodejs/node-addon-api/pull/1445)
+
+## 2024-01-18 Version 7.1.0, @legendecas
+
+### Notable changes
+
+#### API
+
+- Add Env::GetModuleFileName
+- Add SyntaxError
+- Allow NAPI\_VERSION env var and templatize AttachData callback
+- Add common gyp dependency targets.
+
+### Commits
+
+* \[[`864fed488c`](https://github.com/nodejs/node-addon-api/commit/864fed488c)] - build(deps): bump github/codeql-action from 3.22.12 to 3.23.0 (dependabot\[bot]) [#1428](https://github.com/nodejs/node-addon-api/pull/1428)
+* \[[`81a8d43130`](https://github.com/nodejs/node-addon-api/commit/81a8d43130)] - build(deps): bump actions/dependency-review-action from 3.1.4 to 3.1.5 (dependabot\[bot]) [#1427](https://github.com/nodejs/node-addon-api/pull/1427)
+* \[[`e20088941b`](https://github.com/nodejs/node-addon-api/commit/e20088941b)] - build(deps): bump github/codeql-action from 3.22.11 to 3.22.12 (dependabot\[bot]) [#1426](https://github.com/nodejs/node-addon-api/pull/1426)
+* \[[`76c7b12e4e`](https://github.com/nodejs/node-addon-api/commit/76c7b12e4e)] - build(deps): bump actions/setup-node from 4.0.0 to 4.0.1 (dependabot\[bot]) [#1425](https://github.com/nodejs/node-addon-api/pull/1425)
+* \[[`cd58edde1d`](https://github.com/nodejs/node-addon-api/commit/cd58edde1d)] - build(deps): bump actions/upload-artifact from 3.1.3 to 4.0.0 (dependabot\[bot]) [#1424](https://github.com/nodejs/node-addon-api/pull/1424)
+* \[[`0fd1b9e0e1`](https://github.com/nodejs/node-addon-api/commit/0fd1b9e0e1)] - build(deps): bump github/codeql-action from 2.22.8 to 3.22.11 (dependabot\[bot]) [#1423](https://github.com/nodejs/node-addon-api/pull/1423)
+* \[[`c181b19d68`](https://github.com/nodejs/node-addon-api/commit/c181b19d68)] - build(deps): bump actions/stale from 8.0.0 to 9.0.0 (dependabot\[bot]) [#1418](https://github.com/nodejs/node-addon-api/pull/1418)
+* \[[`6fa67791a1`](https://github.com/nodejs/node-addon-api/commit/6fa67791a1)] - build(deps): bump actions/setup-python from 4.7.1 to 5.0.0 (dependabot\[bot]) [#1417](https://github.com/nodejs/node-addon-api/pull/1417)
+* \[[`1fff346fa6`](https://github.com/nodejs/node-addon-api/commit/1fff346fa6)] - build(deps): bump actions/dependency-review-action from 3.1.3 to 3.1.4 (dependabot\[bot]) [#1415](https://github.com/nodejs/node-addon-api/pull/1415)
+* \[[`ecb9690fe5`](https://github.com/nodejs/node-addon-api/commit/ecb9690fe5)] - build(deps): bump github/codeql-action from 2.22.7 to 2.22.8 (dependabot\[bot]) [#1414](https://github.com/nodejs/node-addon-api/pull/1414)
+* \[[`969547b871`](https://github.com/nodejs/node-addon-api/commit/969547b871)] - build(deps): bump github/codeql-action from 2.22.5 to 2.22.7 (dependabot\[bot]) [#1413](https://github.com/nodejs/node-addon-api/pull/1413)
+* \[[`183d1522a9`](https://github.com/nodejs/node-addon-api/commit/183d1522a9)] - build(deps): bump step-security/harden-runner from 2.6.0 to 2.6.1 (dependabot\[bot]) [#1412](https://github.com/nodejs/node-addon-api/pull/1412)
+* \[[`25f977724a`](https://github.com/nodejs/node-addon-api/commit/25f977724a)] - build(deps): bump actions/dependency-review-action from 3.1.0 to 3.1.3 (dependabot\[bot]) [#1410](https://github.com/nodejs/node-addon-api/pull/1410)
+* \[[`f6d125a407`](https://github.com/nodejs/node-addon-api/commit/f6d125a407)] - build(deps): bump actions/setup-python from 4.7.0 to 4.7.1 (dependabot\[bot]) [#1406](https://github.com/nodejs/node-addon-api/pull/1406)
+* \[[`ce78a39ec7`](https://github.com/nodejs/node-addon-api/commit/ce78a39ec7)] - build(deps): bump github/codeql-action from 2.22.4 to 2.22.5 (dependabot\[bot]) [#1400](https://github.com/nodejs/node-addon-api/pull/1400)
+* \[[`dc211ebb48`](https://github.com/nodejs/node-addon-api/commit/dc211ebb48)] - build(deps): bump actions/setup-node from 3.8.1 to 4.0.0 (dependabot\[bot]) [#1398](https://github.com/nodejs/node-addon-api/pull/1398)
+* \[[`cab559e3bd`](https://github.com/nodejs/node-addon-api/commit/cab559e3bd)] - build(deps): bump ossf/scorecard-action from 2.3.0 to 2.3.1 (dependabot\[bot]) [#1397](https://github.com/nodejs/node-addon-api/pull/1397)
+* \[[`f71ff5582d`](https://github.com/nodejs/node-addon-api/commit/f71ff5582d)] - build(deps): bump github/codeql-action from 2.22.3 to 2.22.4 (dependabot\[bot]) [#1396](https://github.com/nodejs/node-addon-api/pull/1396)
+* \[[`21c1d08680`](https://github.com/nodejs/node-addon-api/commit/21c1d08680)] - build(deps): bump actions/checkout from 4.1.0 to 4.1.1 (dependabot\[bot]) [#1394](https://github.com/nodejs/node-addon-api/pull/1394)
+* \[[`e4eec0939c`](https://github.com/nodejs/node-addon-api/commit/e4eec0939c)] - build(deps): bump github/codeql-action from 2.21.9 to 2.22.3 (dependabot\[bot]) [#1393](https://github.com/nodejs/node-addon-api/pull/1393)
+* \[[`94f3459474`](https://github.com/nodejs/node-addon-api/commit/94f3459474)] - build(deps): bump ossf/scorecard-action from 2.2.0 to 2.3.0 (dependabot\[bot]) [#1388](https://github.com/nodejs/node-addon-api/pull/1388)
+* \[[`90a741ef10`](https://github.com/nodejs/node-addon-api/commit/90a741ef10)] - build(deps): bump step-security/harden-runner from 2.5.1 to 2.6.0 (dependabot\[bot]) [#1386](https://github.com/nodejs/node-addon-api/pull/1386)
+* \[[`7e1aa06132`](https://github.com/nodejs/node-addon-api/commit/7e1aa06132)] - Update LICENSE.md (Michael Dawson) [#1385](https://github.com/nodejs/node-addon-api/pull/1385)
+* \[[`0a0612362e`](https://github.com/nodejs/node-addon-api/commit/0a0612362e)] - build(deps): bump github/codeql-action from 2.21.7 to 2.21.9 (dependabot\[bot]) [#1384](https://github.com/nodejs/node-addon-api/pull/1384)
+* \[[`47bd430da2`](https://github.com/nodejs/node-addon-api/commit/47bd430da2)] - build(deps): bump actions/checkout from 4.0.0 to 4.1.0 (dependabot\[bot]) [#1383](https://github.com/nodejs/node-addon-api/pull/1383)
+* \[[`b3f7f73cb9`](https://github.com/nodejs/node-addon-api/commit/b3f7f73cb9)] - build(deps): bump actions/dependency-review-action from 3.0.8 to 3.1.0 (dependabot\[bot]) [#1377](https://github.com/nodejs/node-addon-api/pull/1377)
+* \[[`12c1655387`](https://github.com/nodejs/node-addon-api/commit/12c1655387)] - build(deps): bump github/codeql-action from 2.21.6 to 2.21.7 (dependabot\[bot]) [#1380](https://github.com/nodejs/node-addon-api/pull/1380)
+* \[[`6abed318e4`](https://github.com/nodejs/node-addon-api/commit/6abed318e4)] - build(deps): bump github/codeql-action from 2.21.5 to 2.21.6 (dependabot\[bot]) [#1378](https://github.com/nodejs/node-addon-api/pull/1378)
+* \[[`89eda59930`](https://github.com/nodejs/node-addon-api/commit/89eda59930)] - build(deps): bump actions/upload-artifact from 3.1.2 to 3.1.3 (dependabot\[bot]) [#1376](https://github.com/nodejs/node-addon-api/pull/1376)
+* \[[`90870dbffa`](https://github.com/nodejs/node-addon-api/commit/90870dbffa)] - build(deps): bump actions/checkout from 3.6.0 to 4.0.0 (dependabot\[bot]) [#1375](https://github.com/nodejs/node-addon-api/pull/1375)
+* \[[`b860793eff`](https://github.com/nodejs/node-addon-api/commit/b860793eff)] - build(deps): bump github/codeql-action from 2.21.2 to 2.21.5 (dependabot\[bot]) [#1372](https://github.com/nodejs/node-addon-api/pull/1372)
+* \[[`f9b9974b4a`](https://github.com/nodejs/node-addon-api/commit/f9b9974b4a)] - build(deps): bump actions/checkout from 3.5.3 to 3.6.0 (dependabot\[bot]) [#1371](https://github.com/nodejs/node-addon-api/pull/1371)
+* \[[`9596e3de2d`](https://github.com/nodejs/node-addon-api/commit/9596e3de2d)] - build(deps): bump actions/setup-node from 3.7.0 to 3.8.1 (dependabot\[bot]) [#1370](https://github.com/nodejs/node-addon-api/pull/1370)
+* \[[`e969210747`](https://github.com/nodejs/node-addon-api/commit/e969210747)] - build(deps): bump actions/dependency-review-action from 3.0.6 to 3.0.8 (dependabot\[bot]) [#1368](https://github.com/nodejs/node-addon-api/pull/1368)
+* \[[`13ef96a5a9`](https://github.com/nodejs/node-addon-api/commit/13ef96a5a9)] - build(deps): bump step-security/harden-runner from 2.5.0 to 2.5.1 (dependabot\[bot]) [#1364](https://github.com/nodejs/node-addon-api/pull/1364)
+* \[[`9776d148b3`](https://github.com/nodejs/node-addon-api/commit/9776d148b3)] - build(deps): bump github/codeql-action from 2.21.1 to 2.21.2 (dependabot\[bot]) [#1358](https://github.com/nodejs/node-addon-api/pull/1358)
+* \[[`59dc6be097`](https://github.com/nodejs/node-addon-api/commit/59dc6be097)] - build(deps): bump github/codeql-action from 2.21.0 to 2.21.1 (dependabot\[bot]) [#1357](https://github.com/nodejs/node-addon-api/pull/1357)
+* \[[`5e72796cd5`](https://github.com/nodejs/node-addon-api/commit/5e72796cd5)] - build(deps): bump step-security/harden-runner from 2.4.1 to 2.5.0 (dependabot\[bot]) [#1356](https://github.com/nodejs/node-addon-api/pull/1356)
+* \[[`4e62db45e4`](https://github.com/nodejs/node-addon-api/commit/4e62db45e4)] - build(deps): bump github/codeql-action from 2.20.3 to 2.21.0 (dependabot\[bot]) [#1353](https://github.com/nodejs/node-addon-api/pull/1353)
+* \[[`0c093a33e8`](https://github.com/nodejs/node-addon-api/commit/0c093a33e8)] - build(deps): bump github/codeql-action from 2.20.1 to 2.20.3 (dependabot\[bot]) [#1349](https://github.com/nodejs/node-addon-api/pull/1349)
+* \[[`5523b2d3fa`](https://github.com/nodejs/node-addon-api/commit/5523b2d3fa)] - build(deps): bump actions/setup-node from 3.6.0 to 3.7.0 (dependabot\[bot]) [#1348](https://github.com/nodejs/node-addon-api/pull/1348)
+* \[[`afa494ef7f`](https://github.com/nodejs/node-addon-api/commit/afa494ef7f)] - Add Node.js version restrictions (Ingo Fischer) [#1340](https://github.com/nodejs/node-addon-api/pull/1340)
+* \[[`ac4c87f660`](https://github.com/nodejs/node-addon-api/commit/ac4c87f660)] - build(deps): bump ossf/scorecard-action from 2.0.6 to 2.2.0 (dependabot\[bot]) [#1344](https://github.com/nodejs/node-addon-api/pull/1344)
+* \[[`47aeb6689d`](https://github.com/nodejs/node-addon-api/commit/47aeb6689d)] - build(deps): bump github/codeql-action from 2.2.12 to 2.20.1 (dependabot\[bot]) [#1343](https://github.com/nodejs/node-addon-api/pull/1343)
+* \[[`bd45a8fffc`](https://github.com/nodejs/node-addon-api/commit/bd45a8fffc)] - build(deps): bump step-security/harden-runner from 2.3.0 to 2.4.1 (dependabot\[bot]) [#1342](https://github.com/nodejs/node-addon-api/pull/1342)
+* \[[`343a1e1708`](https://github.com/nodejs/node-addon-api/commit/343a1e1708)] - build(deps-dev): bump fs-extra from 9.1.0 to 11.1.1 (dependabot\[bot]) [#1335](https://github.com/nodejs/node-addon-api/pull/1335)
+* \[[`4168c10182`](https://github.com/nodejs/node-addon-api/commit/4168c10182)] - build(deps): bump actions/stale from 5.2.1 to 8.0.0 (dependabot\[bot]) [#1333](https://github.com/nodejs/node-addon-api/pull/1333)
+* \[[`1c182abd1f`](https://github.com/nodejs/node-addon-api/commit/1c182abd1f)] - build(deps): bump actions/dependency-review-action from 2.5.1 to 3.0.6 (dependabot\[bot]) [#1331](https://github.com/nodejs/node-addon-api/pull/1331)
+* \[[`717a61931d`](https://github.com/nodejs/node-addon-api/commit/717a61931d)] - build(deps): bump actions/checkout from 3.5.2 to 3.5.3 (dependabot\[bot]) [#1329](https://github.com/nodejs/node-addon-api/pull/1329)
+* \[[`d605d62c89`](https://github.com/nodejs/node-addon-api/commit/d605d62c89)] - **chore**: lock python version in actions (Chengzhong Wu) [#1403](https://github.com/nodejs/node-addon-api/pull/1403)
+* \[[`734e3f2509`](https://github.com/nodejs/node-addon-api/commit/734e3f2509)] - **doc**: fix rendering of code blocks in list (Tobias Nießen) [#1401](https://github.com/nodejs/node-addon-api/pull/1401)
+* \[[`dfdf6eb6e6`](https://github.com/nodejs/node-addon-api/commit/dfdf6eb6e6)] - **doc**: add missing title IsBigInt (Marx) [#1352](https://github.com/nodejs/node-addon-api/pull/1352)
+* \[[`8850997f38`](https://github.com/nodejs/node-addon-api/commit/8850997f38)] - **doc**: fix typo AsyncProgressWorker::ExecutionProgress (JerryZhongJ) [#1350](https://github.com/nodejs/node-addon-api/pull/1350)
+* \[[`8192a471a1`](https://github.com/nodejs/node-addon-api/commit/8192a471a1)] - **docs**: fixed Broken Links (Ömer AKGÜL) [#1405](https://github.com/nodejs/node-addon-api/pull/1405)
+* \[[`16a18c047a`](https://github.com/nodejs/node-addon-api/commit/16a18c047a)] - **fix**: handle c++ exception in TSFN callback (Chengzhong Wu) [#1345](https://github.com/nodejs/node-addon-api/pull/1345)
+* \[[`ab14347080`](https://github.com/nodejs/node-addon-api/commit/ab14347080)] - **gyp**: add common targets (Chengzhong Wu) [#1389](https://github.com/nodejs/node-addon-api/pull/1389)
+* \[[`fa3518bc08`](https://github.com/nodejs/node-addon-api/commit/fa3518bc08)] - **src**: remove duplicate buffer info calls (Chengzhong Wu) [#1354](https://github.com/nodejs/node-addon-api/pull/1354)
+* \[[`b83e453e6e`](https://github.com/nodejs/node-addon-api/commit/b83e453e6e)] - **src**: add Env::GetModuleFileName (Kevin Eady) [#1327](https://github.com/nodejs/node-addon-api/pull/1327)
+* \[[`d9828c6264`](https://github.com/nodejs/node-addon-api/commit/d9828c6264)] - **src**: add SyntaxError (Kevin Eady) [#1326](https://github.com/nodejs/node-addon-api/pull/1326)
+* \[[`c52e764bb2`](https://github.com/nodejs/node-addon-api/commit/c52e764bb2)] - **src,test,build**: allow NAPI\_VERSION env var and templatize AttachData callback (Gabriel Schulhof) [#1399](https://github.com/nodejs/node-addon-api/pull/1399)
+* \[[`8f028d630a`](https://github.com/nodejs/node-addon-api/commit/8f028d630a)] - **test**: remove experimental flag from bigint (Gabriel Schulhof) [#1395](https://github.com/nodejs/node-addon-api/pull/1395)
+* \[[`414be9e000`](https://github.com/nodejs/node-addon-api/commit/414be9e000)] - **test**: run interfering tests in their own process (Gabriel Schulhof) [#1325](https://github.com/nodejs/node-addon-api/pull/1325)
+
 ## 2023-06-13 Version 7.0.0, @KevinEady
 
 ### Notable changes
@@ -1097,5 +1248,3 @@ yet backported in the previous Node.js version.
 * [0a899bf1c5] - doc: update indication of latest version (Michael Dawson) https://github.com/nodejs/node-addon-api/pull/211
 * [17c74e5a5e] - n-api: RangeError in napi_create_dataview() (Jinho Bang) https://github.com/nodejs/node-addon-api/pull/214
 * [4058a29989] - n-api: fix memory leak in napi_async_destroy() (Jinho Bang) https://github.com/nodejs/node-addon-api/pull/213
-
-
